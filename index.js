@@ -8,7 +8,7 @@ var sentiment = require('sentiment');
 var env = require('node-env-file');
 env(__dirname + '/.env');
 
-//
+//set up the server configuration
 app.set('port', (process.env.PORT || 5000));
 app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/public'));
@@ -28,6 +28,7 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
+//bring in the tweets and analyze for sentiment
 app.get('/search/:terms', function (req, res, next) {
   var tweets = twitter.get('search/tweets', 
     { 
@@ -46,5 +47,5 @@ app.get('/search/:terms', function (req, res, next) {
 
 //start the server listening for requests
 server.listen(app.get('port'), function() {
-  console.log("Tweetiment is running at localhost:" + app.get('port'));
+  console.log("tweetiment is running at localhost:" + app.get('port'));
 });
