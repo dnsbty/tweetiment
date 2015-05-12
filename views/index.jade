@@ -1,0 +1,17 @@
+html
+  head
+    title Tweetiment
+    meta(name='viewport',content='width=device-width,initial-scale=1')
+    link(href='/styles/global.css',rel='stylesheet')
+    link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',rel='stylesheet')
+  body
+    header
+      h1.title Tweetiment
+    div.search
+      form#search
+        input#terms(type='text',name='term')
+        button.btn(type='submit') Search
+    div.tweets
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+    script(src='/scripts/jquery.tweetParser.min.js')
+    script(src='/scripts/global.js')

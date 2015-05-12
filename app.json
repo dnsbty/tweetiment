@@ -1,0 +1,11 @@
+{
+  "name": "Tweetiment",
+  "description": "Gather sentiment analysis on the latest tweets for a given tag",
+  "repository": "https://github.com/dnsbty/tweetiment",
+  "keywords": [
+    "node",
+    "express",
+    "twitter",
+    "tweet",
+    "sentiment"]
+}

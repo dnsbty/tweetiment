@@ -1,0 +1,36 @@
+{
+  "name": "tweetiment",
+  "version": "0.0.1",
+  "description": "An app for analyzing sentiment of tweets",
+  "main": "index.js",
+  "author": {
+    "name": "Dennis Beatty",
+    "email": "dennis@dcbeatty.com",
+    "url": "http://dennisbeatty.com"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "~4.9.x",
+    "twit": "~1.1.x",
+    "jade": "~1.9.x",
+    "node-env-file": "~0.1.x",
+    "sentiment": "~1.0.x"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dnsbty/tweetiment"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "twitter",
+    "tweet",
+    "sentiment"
+  ],
+  "license": "MIT"
+}
