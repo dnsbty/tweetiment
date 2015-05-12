@@ -22,3 +22,9 @@ div.tweet {
 p {
 	margin: 0;
 }
+img.profile-image {
+	float: left;
+	margin-right: 1em;
+	height: 48px;
+	width: 48px;
+}
