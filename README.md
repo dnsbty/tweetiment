@@ -1,12 +1,12 @@
-# LDSconf
+# tweetiment
 
-An app for streaming live tweets of the LDSconf hashtag on Twitter
+An app for performing sentiment analysis on tweets
 
 ## Installation
 
 ```
-git clone https://github.com/dnsbty/ldsconf.git
-cd ldsconf
+git clone https://github.com/dnsbty/tweetiment.git
+cd tweetiment
 npm install
 cp sample.env .env
 ```
