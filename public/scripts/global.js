@@ -62,11 +62,8 @@ $(function(){
       $('#worst span').text(worst.sentiment.score);
       $('#worst a.link').attr('rel', worst.id);
       showTab('stats');
-
-      //show the footer
-      $('footer').show();
-      });
-      return false;
+    });
+    return false;
   });
 });
 
@@ -88,6 +85,20 @@ $('a.link').on('click', function() {
   $('html, body').animate({
       scrollTop: $('#' + $(this).attr('rel')).offset().top - $('header').outerHeight()
   }, 500);
+});
+
+//button group handling for settings
+$('.btn-group button').on('click', function() {
+  $(this).siblings('button').removeClass('active');
+  $(this).addClass('active');
+});
+
+//number field handling for settings
+$('.input-group.number button').on('click', function() {
+  if ($(this).attr('rel') == 'down')
+    $(this).parents('span').siblings('input').val(parseInt($(this).parents('span').siblings('input').val()) - 1);
+  else if ($(this).attr('rel') == 'up')
+    $(this).parents('span').siblings('input').val(parseInt($(this).parents('span').siblings('input').val()) + 1);
 });
 
 //hide all tabs and display the one that is passed in

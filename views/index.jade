@@ -38,10 +38,29 @@ html
       div.tweets
         div.container.top Loading...
       div.settings
-        div.container.top Settings
+        div.container.top
+          h2 Settings
+          p Real Time Analysis
+          div.btn-group
+            button.btn.btn-default.active(type='button') On
+            button.btn.btn-default(type='button') Off
+          p Tweets Per Minute
+          div.input-group.col-xs-4.col-sm-3.col-md-2.number
+            span.input-group-btn
+              button.btn.btn-default(type='button',rel='down') -
+            input#terms.form-control(type='text',value='12',readonly)
+            span.input-group-btn
+              button.btn.btn-default(type='button',rel='up') +
+          p Sentiment Coloring
+          div.btn-group
+            button.btn.btn-default.active(type='button') On
+            button.btn.btn-default(type='button') Off
     footer
       nav
         ul
+          li
+            a.tab(rel='intro',alt='Home')
+              i.fa.fa-home
           li
             a.tab(rel='stats',alt='Statistics')
               i.fa.fa-bar-chart
