@@ -15,5 +15,5 @@ Then you must edit `.env` to use your Twitter credentials
 ## Usage
 
 ```
-foreman start web
+npm start web
 ```
