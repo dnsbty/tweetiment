@@ -71,7 +71,7 @@ $('a.tab').on('click', function() {
 $('a.link').on('click', function() {
   showTab('tweets');
   $('html, body').animate({
-      scrollTop: $('#' + $(this).attr('rel')).offset().top
+      scrollTop: $('#' + $(this).attr('rel')).offset().top - $('header').outerHeight()
   }, 500);
 });
 
