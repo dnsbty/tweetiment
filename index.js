@@ -34,7 +34,8 @@ app.get('/search/:terms', function (req, res, next) {
     { 
       q: req.params.terms + ' -filter:retweets', 
       count: 100,
-      result_type: 'recent'
+      result_type: 'recent',
+      lang: 'en'
     }, 
     function(err, data, response) {
     for (i = 0; i < data.statuses.length; i++)
