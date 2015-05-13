@@ -39,6 +39,29 @@ div.tweets {
 		padding: .5em;
 		border-bottom: 1px solid #999;
 	}
+		.pos-1 { background-color: #FAFBFC; }
+		.pos-2 { background-color: #F6F9F6; }
+		.pos-3 { background-color: #F2F7F0; }
+		.pos-4 { background-color: #EEF5EA; }
+		.pos-5 { background-color: #EAF3E4; }
+		.pos-6 { background-color: #E6F1DE; }
+		.pos-7 { background-color: #E2EFD8; }
+		.pos-8 { background-color: #DEEDD2; }
+		.pos-9 { background-color: #DAEBCC; }
+		.pos-10 { background-color: #D6E9C6; }
+		.pos-11 { background-color: #C1D2B2; }
+		.neg-1 { background-color: #F8F3F3; }
+		.neg-2 { background-color: #F5E9E9; }
+		.neg-3 { background-color: #F2DFDF; }
+		.neg-4 { background-color: #EFD5D5; }
+		.neg-5 { background-color: #ECCBCB; }
+		.neg-6 { background-color: #E9C1C1; }
+		.neg-7 { background-color: #E6B7B7; }
+		.neg-8 { background-color: #E3ADAD; }
+		.neg-9 { background-color: #E0A3A3; }
+		.neg-10 { background-color: #DD9999; }
+		.neg-11 { background-color: #C78A8A; }
+
 		img.profile-image {
 			float: left;
 			margin-right: 1em;

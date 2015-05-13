@@ -38,15 +38,13 @@ $(function(){
         //and save the most positive and negative tweets
         if (tweet.sentiment.score > 0)
         {
-          $('#'+tweet.id).css('background-color', 'rgba(214, 233, 198, '+tweet.sentiment.score/10+')')
-                         .css('color', '#3c763d');
+          $('#'+tweet.id).addClass('pos-'+tweet.sentiment.score);
           if (tweet.sentiment.score > best.sentiment.score)
             best = tweet;
         }
         else if (tweet.sentiment.score < 0)
         {
-          $('#'+tweet.id).css('background-color', 'rgba(221, 153, 153, '+Math.abs(tweet.sentiment.score)/10+')')
-                         .css('color', '#a94442');
+          $('#'+tweet.id).addClass('neg'+tweet.sentiment.score);
           if (tweet.sentiment.score < worst.sentiment.score)
             worst = tweet;
         }
