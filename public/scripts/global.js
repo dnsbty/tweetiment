@@ -7,8 +7,8 @@ $(function(){
   $('#search').on('submit', function(e) {
     e.preventDefault();
     var terms = encodeURIComponent($('#terms').val());
-    console.log('Terms: ' + terms);
     $('.tweets').html('Loading...');
+    showTab('tweets');
 
     //send the request to the server
   	$.getJSON( '/search/' + terms, function( data ) {
@@ -43,6 +43,18 @@ $(function(){
   });
 
 });
+
+//show tab from footer link click
+$('a.tab').on('click', function() {
+  showTab($(this).attr('rel'));
+});
+
+//hide all tabs and display the one that is passed in
+function showTab(tab)
+{
+  $.each([ 'intro','stats', 'tweets', 'settings' ], function( index, div ){ $('.' + div).hide();});
+  $('.' + tab).show();
+}
 
 //google analytics stuff
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
