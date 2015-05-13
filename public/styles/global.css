@@ -5,26 +5,39 @@ body {
 }
 header {
 	margin: 0;
-	padding: .5em 1em;
+	padding: 0.5em 0;
 	background-color: #2a3753;
 	color: #fff;
 }
-h1 {
-	margin: 0;
-	font-size: 2em;
-	display: inline-block;
-}
+	form {
+		margin: 0.5em 0;
+	}
 div.tweet {
 	overflow: hidden;
 	padding: .5em;
 	border-bottom: 1px solid #999;
 }
-p {
-	margin: 0;
-}
-img.profile-image {
-	float: left;
-	margin-right: 1em;
-	height: 48px;
-	width: 48px;
-}
+	div.intro {
+		text-align: center;
+		margin-top: 2em;
+	}
+		h1 {
+			margin: 0;
+			font-size: 2em;
+		}
+		p.instructions {
+			margin-top: 2em;
+		}
+	img.profile-image {
+		float: left;
+		margin-right: 1em;
+		height: 48px;
+		width: 48px;
+	}
+	h2 {
+		margin: 0;
+		font-size: 1.5em;
+	}
+	p {
+		margin: 0;
+	}

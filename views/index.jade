@@ -2,16 +2,23 @@ html
   head
     title Tweetiment
     meta(name='viewport',content='width=device-width,initial-scale=1')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', rel='stylesheet')
     link(href='/styles/global.css',rel='stylesheet')
     link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',rel='stylesheet')
   body
     header
-      h1.title Tweetiment
-    div.search
-      form#search
-        input#terms(type='text',name='term')
-        button.btn(type='submit') Search
-    div.tweets
+      div.container
+        form#search
+          div.input-group
+            input#terms.form-control(type='text',placeholder='Search for...')
+            span.input-group-btn
+              button.btn.btn-default(type='submit') Go!
+    main
+      div.tweets
+        div.intro
+          p Welcome to
+          h1 tweetiment
+          p.instructions Simply enter the term to search for and&nbsp;hit&nbsp;go!
     script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
     script(src='/scripts/jquery.tweetParser.min.js')
     script(src='/scripts/global.js')

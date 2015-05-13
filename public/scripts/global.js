@@ -1,5 +1,8 @@
 $(function(){
 
+  //focus on input on page load for easy usability
+  $("#terms").focus();
+
   //bring in tweets
   $('#search').on('submit', function(e) {
     e.preventDefault();
@@ -30,7 +33,7 @@ $(function(){
 
         total += tweet.sentiment.score;
       });
-      $('.tweets').prepend('Average Sentiment: ' + total/count);
+      //$('.tweets').prepend('<p>Average Sentiment: ' + total/count + '</p>');
     });
     return false;
   });
