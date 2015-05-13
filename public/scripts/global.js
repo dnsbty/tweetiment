@@ -5,11 +5,13 @@ $(function(){
     e.preventDefault();
     var terms = encodeURIComponent($('#terms').val());
     console.log('Terms: ' + terms);
+    $('.tweets').html('Loading...');
 
     //send the request to the server
   	$.getJSON( '/search/' + terms, function( data ) {
       var count = data.statuses.length,
           total = 0;
+      $('.tweets').html('');
       $.each(data.statuses, function( index, tweet ){
         console.log(tweet);
         $('.tweets').append('<div class="tweet" id="'+tweet.id+'"></div>')
