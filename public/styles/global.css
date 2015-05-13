@@ -61,7 +61,6 @@ footer {
 	bottom: 0;
 	margin: 0;
 	width: 100%;
-	padding: 0.5em 0;
 	background-color: #2a3753;
 	color: #fff;
 }
@@ -71,17 +70,24 @@ footer {
 		margin: 0;
 	}
 		nav li {
-			display: inline-block;
-			width: 33%;
+			display: inline;
 			text-align: center;
 		}
 		nav a {
 			color: #fff;
 			cursor: hand;
+			display: inline-block;
+			padding: 0.5em 0;
+			width: 33%;
+			font-size: 1.5em;
 		}
 		nav a:hover {
-			color: #559cd9;
+			background-color: #559cd9;
 			text-decoration: none;
+		}
+		nav a.active {
+			background-color: #458cc9;
+			color: #23527c;
 		}
 .hidden {
 	display: none;

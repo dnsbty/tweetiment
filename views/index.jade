@@ -40,11 +40,14 @@ html
       nav
         ul
           li
-            a.tab(rel='stats') Stats
+            a.tab(rel='stats',alt='Statistics')
+              i.fa.fa-bar-chart
           li
-            a.tab(rel='tweets') Raw Tweets
+            a.tab(rel='tweets',alt='Tweets')
+              i.fa.fa-list-ul
           li
-            a.tab(rel='settings') Settings
+            a.tab(rel='settings',alt='Settings')
+              i.fa.fa-cog
     script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
     script(src='/scripts/jquery.tweetParser.min.js')
     script(src='/scripts/global.js')

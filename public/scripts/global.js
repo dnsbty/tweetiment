@@ -78,8 +78,10 @@ $('a.link').on('click', function() {
 //hide all tabs and display the one that is passed in
 function showTab(tab)
 {
-  $.each([ 'intro','stats', 'tweets', 'settings' ], function( index, div ){ $('.' + div).hide();});
+  $.each([ 'intro', 'stats', 'tweets', 'settings' ], function( index, div ){ $('.' + div).hide();});
   $('.' + tab).show();
+  $('a.tab').removeClass('active');
+  $('a.tab[rel='+tab+']').addClass('active');
 }
 
 //google analytics stuff
