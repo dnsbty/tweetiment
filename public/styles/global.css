@@ -39,6 +39,7 @@ div.tweets {
 		padding: .5em;
 		border-bottom: 1px solid #999;
 	}
+		.pos { color: #3c763d;}
 		.pos-1 { background-color: #FAFBFC; }
 		.pos-2 { background-color: #F6F9F6; }
 		.pos-3 { background-color: #F2F7F0; }
@@ -50,6 +51,7 @@ div.tweets {
 		.pos-9 { background-color: #DAEBCC; }
 		.pos-10 { background-color: #D6E9C6; }
 		.pos-11 { background-color: #C1D2B2; }
+		.neg { color: #a94442;}
 		.neg-1 { background-color: #F8F3F3; }
 		.neg-2 { background-color: #F5E9E9; }
 		.neg-3 { background-color: #F2DFDF; }
@@ -61,6 +63,10 @@ div.tweets {
 		.neg-9 { background-color: #E0A3A3; }
 		.neg-10 { background-color: #DD9999; }
 		.neg-11 { background-color: #C78A8A; }
+		div.tweet.muted {
+			color: #000;
+			background-color: #FFF;
+		}
 
 		img.profile-image {
 			float: left;

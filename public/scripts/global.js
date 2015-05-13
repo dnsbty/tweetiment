@@ -38,13 +38,13 @@ $(function(){
         //and save the most positive and negative tweets
         if (tweet.sentiment.score > 0)
         {
-          $('#'+tweet.id).addClass('pos-'+tweet.sentiment.score);
+          $('#'+tweet.id).addClass('pos pos-'+tweet.sentiment.score);
           if (tweet.sentiment.score > best.sentiment.score)
             best = tweet;
         }
         else if (tweet.sentiment.score < 0)
         {
-          $('#'+tweet.id).addClass('neg'+tweet.sentiment.score);
+          $('#'+tweet.id).addClass('neg neg'+tweet.sentiment.score);
           if (tweet.sentiment.score < worst.sentiment.score)
             worst = tweet;
         }
@@ -89,6 +89,14 @@ $('a.link').on('click', function() {
 $('.btn-group button').on('click', function() {
   $(this).siblings('button').removeClass('active');
   $(this).addClass('active');
+});
+
+//mute coloring button group handling for settings
+$('.btn-group#coloring button').on('click', function() {
+  if ($(this).attr('rel') == 'on')
+    $('div.tweet').removeClass('muted');
+  else
+    $('div.tweet').addClass('muted');
 });
 
 //number field handling for settings
