@@ -7,7 +7,7 @@ $(function(){
   $('#search').on('submit', function(e) {
     e.preventDefault();
     var terms = encodeURIComponent($('#terms').val());
-    $('.tweets').html('Loading...');
+    $('.tweets').html('<div class="container top">Loading...</div>');
     showTab('tweets');
 
     //send the request to the server

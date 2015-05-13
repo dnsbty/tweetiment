@@ -86,6 +86,9 @@ footer {
 .hidden {
 	display: none;
 }
+.top {
+	margin-top: 1em;
+}
 a.link {
 	margin-left: 0.5em;
 	cursor: hand;
