@@ -13,7 +13,8 @@ $(function(){
     //send the request to the server
   	$.getJSON( '/search/' + terms, function( data ) {
       var count = data.statuses.length,
-          total = 0;
+          total = 0,
+          best = worst = data.statuses[0];
 
       //clear the display and then show all the tweets
       $('.tweets').html('');
@@ -26,27 +27,52 @@ $(function(){
         $('#'+tweet.id+' p.tweet').tweetParser();
 
         //change the background color based on sentiment score
+        //and save the most positive and negative tweets
         if (tweet.sentiment.score > 0)
+        {
           $('#'+tweet.id).css('background-color', 'rgba(214, 233, 198, '+tweet.sentiment.score/10+')')
                          .css('color', '#3c763d');
+          if (tweet.sentiment.score > best.sentiment.score)
+            best = tweet;
+        }
         else if (tweet.sentiment.score < 0)
+        {
           $('#'+tweet.id).css('background-color', 'rgba(221, 153, 153, '+Math.abs(tweet.sentiment.score)/10+')')
                          .css('color', '#a94442');
+          if (tweet.sentiment.score < worst.sentiment.score)
+            worst = tweet;
+        }
 
         total += tweet.sentiment.score;
       });
-    });
 
-    //show the footer
-    $('footer').show();
-    return false;
+      //display the stats
+      $('#count span').text(count);
+      $('#average span').text((total / count).toFixed(2));
+      $('#best span').text(best.sentiment.score);
+      $('#best a.link').attr('rel', best.id);
+      $('#worst span').text(worst.sentiment.score);
+      $('#worst a.link').attr('rel', worst.id);
+      showTab('stats');
+
+      //show the footer
+      $('footer').show();
+      });
+      return false;
   });
-
 });
 
 //show tab from footer link click
 $('a.tab').on('click', function() {
   showTab($(this).attr('rel'));
+});
+
+//scroll to tweet
+$('a.link').on('click', function() {
+  showTab('tweets');
+  $('html, body').animate({
+      scrollTop: $('#' + $(this).attr('rel')).offset().top
+  }, 500);
 });
 
 //hide all tabs and display the one that is passed in

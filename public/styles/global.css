@@ -25,6 +25,7 @@ div.intro {
 	}
 div.stats {
 	display: none;
+	padding-top: 15px;
 }
 div.tweets {
 	display: none;
@@ -78,3 +79,10 @@ footer {
 			color: #559cd9;
 			text-decoration: none;
 		}
+.hidden {
+	display: none;
+}
+a.link {
+	margin-left: 0.5em;
+	cursor: hand;
+}

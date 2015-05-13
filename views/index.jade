@@ -18,8 +18,21 @@ html
           p Welcome to
           h1 tweetiment
           p.instructions Simply enter the term to search for and&nbsp;hit&nbsp;go!
-      div.stats Stats
-      div.tweets Raw Tweets
+      div.stats.container
+        h2 Statistics
+        p#count Tweets analyzed: 
+          span 0
+        p#average Average sentiment: 
+          span 0
+        p#worst Worst sentiment: 
+          span 0
+          a.link
+            i.fa.fa-search
+        p#best Best sentiment: 
+          span 0
+          a.link
+            i.fa.fa-search
+      div.tweets Loading...
       div.settings Settings
     footer
       nav
