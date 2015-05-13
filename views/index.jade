@@ -14,11 +14,22 @@ html
             span.input-group-btn
               button.btn.btn-default(type='submit') Go!
     main
-      div.tweets
-        div.intro
+      div.intro
           p Welcome to
           h1 tweetiment
           p.instructions Simply enter the term to search for and&nbsp;hit&nbsp;go!
+      div.stats Stats
+      div.tweets Raw Tweets
+      div.settings Settings
+    footer
+      nav
+        ul
+          li
+            a.stats Stats
+          li
+            a.raw Raw Tweets
+          li
+            a.settings Settings
     script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
     script(src='/scripts/jquery.tweetParser.min.js')
     script(src='/scripts/global.js')

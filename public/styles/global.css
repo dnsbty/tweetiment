@@ -12,32 +12,68 @@ header {
 	form {
 		margin: 0.5em 0;
 	}
-div.tweet {
-	overflow: hidden;
-	padding: .5em;
-	border-bottom: 1px solid #999;
+div.intro {
+	text-align: center;
+	margin-top: 2em;
 }
-	div.intro {
-		text-align: center;
+	h1 {
+		margin: 0;
+		font-size: 2em;
+	}
+	p.instructions {
 		margin-top: 2em;
 	}
-		h1 {
+div.stats {
+	display: none;
+}
+div.tweets {
+	display: none;
+}
+	div.tweet {
+		overflow: hidden;
+		padding: .5em;
+		border-bottom: 1px solid #999;
+	}
+		img.profile-image {
+			float: left;
+			margin-right: 1em;
+			height: 48px;
+			width: 48px;
+		}
+		h2 {
 			margin: 0;
-			font-size: 2em;
+			font-size: 1.5em;
 		}
-		p.instructions {
-			margin-top: 2em;
+		p {
+			margin: 0;
 		}
-	img.profile-image {
-		float: left;
-		margin-right: 1em;
-		height: 48px;
-		width: 48px;
-	}
-	h2 {
+div.settings {
+	display: none;
+}
+footer {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	margin: 0;
+	width: 100%;
+	padding: 0.5em 0;
+	background-color: #2a3753;
+	color: #fff;
+}
+	nav ul {
+		list-style: none;
+		padding: 0;
 		margin: 0;
-		font-size: 1.5em;
 	}
-	p {
-		margin: 0;
-	}
+		nav li {
+			display: inline-block;
+			width: 33%;
+			text-align: center;
+		}
+		nav a {
+			color: #fff;
+		}
+		nav a:hover {
+			color: #559cd9;
+			text-decoration: none;
+		}

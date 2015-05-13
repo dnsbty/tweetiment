@@ -14,9 +14,10 @@ $(function(){
   	$.getJSON( '/search/' + terms, function( data ) {
       var count = data.statuses.length,
           total = 0;
+
+      //clear the display and then show all the tweets
       $('.tweets').html('');
       $.each(data.statuses, function( index, tweet ){
-        console.log(tweet);
         $('.tweets').append('<div class="tweet" id="'+tweet.id+'"></div>')
                     .attr('data-sentiment', tweet.sentiment.score);
         $('#'+tweet.id).append('<img class="profile-image" src="'+tweet.user.profile_image_url+'">')
@@ -24,6 +25,7 @@ $(function(){
                        .append('<p class="tweet">'+tweet.text+'</p>');
         $('#'+tweet.id+' p.tweet').tweetParser();
 
+        //change the background color based on sentiment score
         if (tweet.sentiment.score > 0)
           $('#'+tweet.id).css('background-color', 'rgba(214, 233, 198, '+tweet.sentiment.score/10+')')
                          .css('color', '#3c763d');
@@ -33,8 +35,10 @@ $(function(){
 
         total += tweet.sentiment.score;
       });
-      //$('.tweets').prepend('<p>Average Sentiment: ' + total/count + '</p>');
     });
+
+    //show the footer
+    $('footer').show();
     return false;
   });
 
