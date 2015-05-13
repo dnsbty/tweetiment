@@ -23,6 +23,9 @@ var twitter = new Twit({
   access_token_secret: process.env.TWITTER_ACCESS_SECRET
 });
 
+//create global variables to save API requests
+var trends = { as_of : 0 };
+
 //display the app
 app.get('/', function(req, res) {
   res.render('index');
@@ -38,12 +41,36 @@ app.get('/search/:terms', function (req, res, next) {
       lang: 'en'
     }, 
     function(err, data, response) {
-    for (i = 0; i < data.statuses.length; i++)
-    {
-      data.statuses[i].sentiment = sentiment(data.statuses[i].text);
-    }
-    res.json(data);
-  })
+      for (i = 0; i < data.statuses.length; i++)
+      {
+        data.statuses[i].sentiment = sentiment(data.statuses[i].text);
+      }
+      res.json(data);
+  });
+});
+
+//bring in the list of trends for suggestions
+app.get('/trends', function (req, res, next) {
+
+  //get the new list from twitter if ours is more than 15 minutes old
+  var now = new Date();
+  if (now > new Date(new Date(trends.as_of).getTime() + 15*60000))
+  {
+    var getTrends = twitter.get('trends/place', 
+      { 
+        id: 23424977
+      }, 
+      function(err, data, response) {
+        trends = data[0];
+        trends.requested_at = now;
+        res.json(trends);
+    });
+  }
+  else
+  {
+    trends.requested_at = now;
+    res.json(trends);
+  }
 });
 
 //start the server listening for requests

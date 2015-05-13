@@ -3,6 +3,14 @@ $(function(){
   //focus on input on page load for easy usability
   $("#terms").focus();
 
+  //get current trends as suggestions
+  $.getJSON('/trends/', function(data) {
+    $('#trends').text('');
+    $.each(data.trends, function(index, trend) {
+      $('#trends').append('<p><a class="trend">'+trend.name+'</a></p>')
+    });
+  });
+
   //bring in tweets
   $('#search').on('submit', function(e) {
     e.preventDefault();
@@ -60,6 +68,13 @@ $(function(){
       });
       return false;
   });
+});
+
+//search for trend from trend links
+$('#trends').on('click', 'a.trend', function(e) {
+  var trend = $(this).text();
+  $('#terms').val(trend);
+  $('#search').submit();
 });
 
 //show tab from footer link click
