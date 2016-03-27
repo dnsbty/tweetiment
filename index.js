@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
 var sentiment = require('sentiment');
+var io = require('socket.io')(server);
 
 //load environment variables
 var env = require('node-env-file');

@@ -20,12 +20,16 @@ div.intro {
 	text-align: center;
 	margin-top: 2em;
 }
-	h1 {
+	div.intro h1 {
 		margin: 0;
+		margin-top: -0.25em;
 		font-size: 2em;
 	}
 	p.instructions {
-		margin-top: 2em;
+		margin-top: 0.5em;
+	}
+	#trends p {
+		margin-bottom: 0.25em;
 	}
 div.stats {
 	display: none;
@@ -78,14 +82,17 @@ div.tweets {
 			margin: 0;
 			font-size: 1.5em;
 		}
-		p {
+		div.tweet p {
 			margin: 0;
 		}
 div.settings {
 	display: none;
 }
-	div.settings p {
-		margin-top: 1em;
+div.info {
+	display: none;
+}
+	iframe {
+		display: inline-block;
 	}
 footer {
 	position: fixed;
@@ -109,7 +116,7 @@ footer {
 			cursor: hand;
 			display: inline-block;
 			padding: 0.5em 0;
-			width: 25%;
+			width: 20%;
 			font-size: 1.5em;
 		}
 		nav a:hover {

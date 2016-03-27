@@ -55,6 +55,20 @@ html
           div.btn-group#coloring
             button.btn.btn-default.active(type='button',rel='on') On
             button.btn.btn-default(type='button',rel='off') Off
+      div.info
+        div.container.top
+          h2 About Tweetiment
+          p Created by 
+            a(href='http://dennisbeatty.com') Dennis Beatty
+          a(href='https://github.com/dnsbty')
+            i.fa.fa-github
+          a(href='https://twitter.com/dnsbty')
+            i.fa.fa-twitter
+          a(href='https://linkedin.com/in/denniscbeatty')
+            i.fa.fa-linkedin
+          p All of the code for Tweetiment is released under an MIT license and available on GitHub  
+          iframe(src='https://ghbtns.com/github-btn.html?user=dnsbty&repo=tweetiment&type=star&count=true&size=large',frameborder='0',scrolling='0',width='140px',height='30px')
+          iframe(src='https://ghbtns.com/github-btn.html?user=dnsbty&repo=tweetiment&type=fork&count=true&size=large',frameborder='0',scrolling='0',width='140px',height='30px')
     footer
       nav
         ul
@@ -70,6 +84,9 @@ html
           li
             a.tab(rel='settings',alt='Settings')
               i.fa.fa-cog
+          li
+            a.tab(rel='info',alt='Info')
+              i.fa.fa-info
     script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
     script(src='/scripts/jquery.tweetParser.min.js')
     script(src='/scripts/global.js')
