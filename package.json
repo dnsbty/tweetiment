@@ -13,10 +13,11 @@
   },
   "dependencies": {
     "express": "~4.9.x",
-    "twit": "~1.1.x",
     "jade": "~1.9.x",
     "node-env-file": "~0.1.x",
-    "sentiment": "~1.0.x"
+    "sentiment": "~1.0.x",
+    "socket.io": "^1.4.5",
+    "twit": "~1.1.x"
   },
   "engines": {
     "node": "0.10.x"
