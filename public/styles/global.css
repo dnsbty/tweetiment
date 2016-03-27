@@ -4,6 +4,7 @@ body {
 	margin: 0;
 	padding-top: 4.125em;
 	background-color: #2980b9;
+	color: #fff;
 }
 header {
 	position: fixed;
@@ -11,7 +12,7 @@ header {
 	width: 100%;
 	margin: 0;
 	padding: 0.5em 0;
-	color: #fff;
+	background-color: #2980b9;
 }
 	form {
 		margin: 0.5em 0;
@@ -19,7 +20,6 @@ header {
 div.intro {
 	text-align: center;
 	margin-top: 2em;
-	color: #fff;
 }
 	div.intro h1 {
 		margin: 0;
@@ -48,6 +48,7 @@ div.tweets {
 		padding: 1em;
 		margin: 0.5em;
 		background-color: #fff;
+		color: #2a3753;
 	}
 		.pos { color: #3c763d;}
 		.pos-1 { background-color: #FAFBFC; }
@@ -107,6 +108,7 @@ footer {
 	width: 100%;
 	background-color: #fff;
 	color: #2a3753;
+	border-top: 8px solid #2980b9;
 }
 	nav ul {
 		list-style: none;
@@ -144,4 +146,5 @@ a.link {
 }
 a {
 	cursor: hand;
+	color: #2a3753;
 }
