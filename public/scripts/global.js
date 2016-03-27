@@ -6,8 +6,11 @@ $(function(){
   //get current trends as suggestions
   $.getJSON('/trends/', function(data) {
     $('#trends').text('');
+    var i = 0;
     $.each(data.trends, function(index, trend) {
-      $('#trends').append('<p><a class="trend">'+trend.name+'</a></p>')
+      if (i == 8) return;
+      $('#trends').append('<p><a class="trend">'+trend.name+'</a></p>');
+      i++;
     });
   });
 

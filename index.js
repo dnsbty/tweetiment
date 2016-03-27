@@ -63,6 +63,8 @@ app.get('/trends', function (req, res, next) {
       }, 
       function(err, data, response) {
         trends = data[0];
+        //trends.trends.length(8);
+        //console.log(trends.trends);
         trends.requested_at = now;
         res.json(trends);
     });
@@ -70,6 +72,7 @@ app.get('/trends', function (req, res, next) {
   else
   {
     trends.requested_at = now;
+    console.log(trends);
     res.json(trends);
   }
 });
